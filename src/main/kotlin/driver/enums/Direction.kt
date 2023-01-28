@@ -12,6 +12,15 @@ enum class Direction(val code: Int) : CommandInterface {
     LEFT(code = 37),
     RIGHT(code = 39);
 
+    fun move(): Pair<Int, Int> {
+        return when (this) {
+            FORWARD -> Pair(1, 0)
+            BACK -> Pair(-1, 0)
+            LEFT -> Pair(0, -1)
+            RIGHT -> Pair(0, 1)
+        }
+    }
+
     companion object {
         fun fromKey(value: KeyEvent) = values().first { it.code == value.keyCode }
         fun isValid(value: KeyEvent) = values().any { it.code == value.keyCode }

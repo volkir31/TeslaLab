@@ -14,8 +14,9 @@ import javax.swing.JLabel
 import javax.swing.JPanel
 import javax.swing.SwingConstants
 
-class Gui(private val driver: Driver) : JFrame(driver.localName) {
+object Gui : JFrame("Да") {
     val messageBlock: JLabel = JLabel()
+    var driver: Driver? = null
     init {
         val p = JPanel()
         p.layout = GridLayout(1, 1)
@@ -38,7 +39,7 @@ class Gui(private val driver: Driver) : JFrame(driver.localName) {
                 else -> Action.NONE
             }
 
-            driver.handle(command)
+            driver!!.handle(command)
 
             return@addKeyEventDispatcher true
         }
@@ -50,7 +51,7 @@ class Gui(private val driver: Driver) : JFrame(driver.localName) {
 
         addWindowListener( object: WindowAdapter() {
             override fun windowClosed(e: WindowEvent?) {
-                driver.doDelete()
+                driver!!.doDelete()
             }
         })
     }
@@ -64,14 +65,13 @@ class Gui(private val driver: Driver) : JFrame(driver.localName) {
         super.setVisible(true)
     }
 
-    companion object {
-        fun updateState(command: CommandInterface) = run {
-            println(command)
-        }
+    fun updateState(command: CommandInterface) = run {
+        println(command)
+    }
 
-        fun displayMessage(level: MessageLevel, message: String) {
-            if (level == MessageLevel.Error) {
-            }
+    fun displayMessage(level: MessageLevel, message: String) {
+        if (level == MessageLevel.Error) {
+
         }
     }
 }

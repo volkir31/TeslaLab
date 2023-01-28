@@ -16,7 +16,8 @@ class Driver : Agent() {
     private var commands: ConcurrentHashMap<Int, CommandInterface> = ConcurrentHashMap()
 
     override fun setup() {
-        val gui = Gui(this)
+        val gui = Gui
+        gui.driver = this
         gui.showGui()
 
         addBehaviour(object : TickerBehaviour(this, 1000) {
