@@ -9,6 +9,7 @@ import java.awt.event.KeyEvent
 import java.awt.event.WindowAdapter
 import java.awt.event.WindowEvent
 import java.awt.image.ColorModel
+import java.time.Instant
 import javax.swing.JFrame
 import javax.swing.JLabel
 import javax.swing.JPanel
@@ -71,7 +72,9 @@ object Gui : JFrame("Да") {
 
     fun displayMessage(level: MessageLevel, message: String) {
         if (level == MessageLevel.Error) {
-
+            messageBlock.text = message
         }
     }
+
+    fun clearError() = run { messageBlock.text = "" }
 }

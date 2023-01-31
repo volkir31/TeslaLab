@@ -7,10 +7,10 @@ import java.awt.event.KeyEvent
 @Serializable
 @SerialName("Direction")
 enum class Direction(val code: Int) : CommandInterface {
-    FORWARD(code = 38),
-    BACK(code = 40),
-    LEFT(code = 37),
-    RIGHT(code = 39);
+    FORWARD(code = KeyEvent.VK_UP),
+    BACK(code = KeyEvent.VK_DOWN),
+    LEFT(code = KeyEvent.VK_LEFT),
+    RIGHT(code = KeyEvent.VK_RIGHT);
 
     fun move(): Pair<Int, Int> {
         return when (this) {

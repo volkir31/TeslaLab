@@ -10,6 +10,7 @@ import jade.lang.acl.ACLMessage
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import java.util.Random
 import java.util.concurrent.ConcurrentHashMap
 
 class Driver : Agent() {

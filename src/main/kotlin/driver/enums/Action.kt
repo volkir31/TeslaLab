@@ -7,9 +7,9 @@ import java.awt.event.KeyEvent
 @Serializable
 @SerialName("Action")
 enum class Action(val code: Int) : CommandInterface {
-    ENGINE_START(code = 83),
-    ENGINE_STOP(code = 129),
-    CHARGE(code = 70),
+    ENGINE_START(code = KeyEvent.VK_S),
+    ENGINE_STOP(code = KeyEvent.VK_DEAD_ACUTE),
+    CHARGE(code = KeyEvent.VK_F),
     NONE(code = -1);
 
     companion object {

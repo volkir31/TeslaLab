@@ -1,9 +1,12 @@
 package car
 
+import car.valueObject.Fuel
 import driver.Command
 import driver.Gui
 import driver.enums.Action
+import driver.enums.CommandInterface
 import driver.enums.Direction
+import driver.enums.MessageLevel
 import jade.core.Agent
 import jade.core.behaviours.TickerBehaviour
 import kotlinx.serialization.decodeFromString
@@ -12,8 +15,9 @@ import kotlinx.serialization.json.Json
 class Car : Agent() {
     var position: Pair<Int, Int> = Pair(0, 0)
     var engineIsStarted = false
+    val fuel = Fuel(100.0)
     override fun setup() {
-        addBehaviour(object : TickerBehaviour(this, 1000) {
+        addBehaviour(object : TickerBehaviour(this, 500) {
             override fun onTick() {
                 val msg = myAgent.receive() ?: return
                 if (msg.sender.localName == "driver") {
@@ -30,7 +34,9 @@ class Car : Agent() {
                     }
 
                     if (!engineIsStarted && command.command is Direction) {
-
+                        Gui.displayMessage(MessageLevel.Error, "Невозможно начать ехать с заглушенным двигателем")
+                    } else {
+                        Gui.clearError()
                     }
 
                     if (command.command is Direction) {
