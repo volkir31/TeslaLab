@@ -14,10 +14,10 @@ enum class Direction(val code: Int) : CommandInterface {
 
     fun move(): Pair<Int, Int> {
         return when (this) {
-            FORWARD -> Pair(1, 0)
-            BACK -> Pair(-1, 0)
-            LEFT -> Pair(0, -1)
-            RIGHT -> Pair(0, 1)
+            FORWARD -> Pair(0, -1)
+            BACK -> Pair(0, 1)
+            LEFT -> Pair(-1, 0)
+            RIGHT -> Pair(1, 0)
         }
     }
 

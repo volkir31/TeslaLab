@@ -21,7 +21,7 @@ class Driver : Agent() {
         gui.driver = this
         gui.showGui()
 
-        addBehaviour(object : TickerBehaviour(this, 1000) {
+        addBehaviour(object : TickerBehaviour(this, 1) {
             override fun onTick() {
                 commands.forEach { (index, command) ->
                     val cmd = Command(command)

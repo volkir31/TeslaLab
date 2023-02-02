@@ -1,5 +1,6 @@
 package driver
 
+import car.valueObject.Fuel
 import driver.enums.Action
 import driver.enums.CommandInterface
 import driver.enums.Direction
@@ -8,26 +9,36 @@ import java.awt.*
 import java.awt.event.KeyEvent
 import java.awt.event.WindowAdapter
 import java.awt.event.WindowEvent
-import java.awt.image.ColorModel
-import java.time.Instant
 import javax.swing.JFrame
 import javax.swing.JLabel
 import javax.swing.JPanel
 import javax.swing.SwingConstants
 
-object Gui : JFrame("Да") {
-    val messageBlock: JLabel = JLabel()
+object Gui : JFrame("CAR") {
+    private val messageBlock: JLabel = JLabel()
+    private val fuelBlock: JLabel = JLabel()
+    private val gameField = GameField()
     var driver: Driver? = null
+
     init {
+        add(gameField)
+        isVisible = true
         val p = JPanel()
         p.layout = GridLayout(1, 1)
         messageBlock.also {
-            it.text = "test test"
+            it.text = ""
+            it.horizontalAlignment = SwingConstants.CENTER
+            it.background = Color.RED
+            it.isVisible = true
+        }
+        fuelBlock.also {
+            it.text = ""
             it.horizontalAlignment = SwingConstants.CENTER
             it.background = Color.RED
             it.isVisible = true
         }
         p.add(messageBlock)
+        p.add(fuelBlock)
         contentPane.add(p, BorderLayout.SOUTH)
         isResizable = false
         KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher {
@@ -50,7 +61,7 @@ object Gui : JFrame("Да") {
             it.height = 500
         }
 
-        addWindowListener( object: WindowAdapter() {
+        addWindowListener(object : WindowAdapter() {
             override fun windowClosed(e: WindowEvent?) {
                 driver!!.doDelete()
             }
@@ -58,22 +69,24 @@ object Gui : JFrame("Да") {
     }
 
     fun showGui() {
-        pack()
-        val screenSize = Toolkit.getDefaultToolkit().screenSize
-        val centerX = screenSize.getWidth().toInt() / 2
-        val centerY = screenSize.getHeight().toInt() / 2
-        setLocation(centerX - width, centerY - height)
+        size = Dimension(900, 900)
+        location = Point(400, 0)
+        isAlwaysOnTop = true
         super.setVisible(true)
     }
 
-    fun updateState(command: CommandInterface) = run {
-        println(command)
+    fun updateState(position: Pair<Int, Int>) = run {
+        gameField.move(position)
     }
 
     fun displayMessage(level: MessageLevel, message: String) {
         if (level == MessageLevel.Error) {
             messageBlock.text = message
         }
+    }
+
+    fun updateFuel(fuel: Fuel) {
+        fuelBlock.text = fuel.toString()
     }
 
     fun clearError() = run { messageBlock.text = "" }
