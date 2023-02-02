@@ -39,10 +39,6 @@ class GameField : JPanel(), ActionListener {
         }
         coordinate = newPosition
     }
-//
-//    fun canMove(movement: Pair<Int, Int>): Boolean = run {
-//        if ()
-//    }
 
     private fun initGame() {
         timer.start()
