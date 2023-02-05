@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b9694ec-2b29-4a9b-8e45-a1a85826aec9" name="Changes" comment="Initial commit with agent car and driver">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/driver/GameField.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/car.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/car/Car.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/car/Car.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/car/valueObject/Fuel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/car/valueObject/Fuel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/driver/Driver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/driver/Driver.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/driver/Gui.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/driver/Gui.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/driver/enums/Direction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/driver/enums/Direction.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,24 +38,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "/Users/egormihajlicenko/projects/Tesla/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2724138",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/egormihajlicenko/projects/Tesla/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2724138&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -105,7 +97,9 @@
       <workItem from="1674153276161" duration="87000" />
       <workItem from="1674858599313" duration="5683000" />
       <workItem from="1675061183101" duration="3875000" />
-      <workItem from="1675159137635" duration="16448000" />
+      <workItem from="1675159137635" duration="16511000" />
+      <workItem from="1675369859067" duration="3475000" />
+      <workItem from="1675597184617" duration="133000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit with agent car and driver">
       <created>1674909059724</created>
@@ -128,7 +122,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675159097296</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Initial commit with agent car and driver">
+      <created>1675369755651</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675369755651</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Initial commit with agent car and driver">
+      <created>1675369785381</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675369785381</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

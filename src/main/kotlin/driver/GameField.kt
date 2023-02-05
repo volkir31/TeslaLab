@@ -9,7 +9,6 @@ import java.awt.event.ActionListener
 import javax.swing.ImageIcon
 import javax.swing.JPanel
 import javax.swing.Timer
-import kotlin.math.max
 import kotlin.math.min
 
 class GameField : JPanel(), ActionListener {
@@ -46,8 +45,8 @@ class GameField : JPanel(), ActionListener {
 
     override fun paintComponent(g: Graphics) {
         super.paintComponent(g)
-        val x = min( coordinate.first, countPx / dotSize)
-        val y = min( coordinate.second, countPx / dotSize)
+        val x = min(coordinate.first, countPx / dotSize)
+        val y = min(coordinate.second, countPx / dotSize)
         g.drawImage(carImage, x * dotSize, y * dotSize, dotSize, dotSize, this)
     }
 
