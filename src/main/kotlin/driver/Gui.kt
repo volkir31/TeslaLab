@@ -2,7 +2,6 @@ package driver
 
 import car.valueObject.Fuel
 import driver.enums.Action
-import driver.enums.CommandInterface
 import driver.enums.Direction
 import driver.enums.MessageLevel
 import java.awt.*
