@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b9694ec-2b29-4a9b-8e45-a1a85826aec9" name="Changes" comment="Initial commit with agent car and driver">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/driver/Gui.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/driver/Gui.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +100,7 @@
       <workItem from="1675159137635" duration="16511000" />
       <workItem from="1675369859067" duration="3475000" />
       <workItem from="1675597184617" duration="133000" />
+      <workItem from="1675615280104" duration="338000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit with agent car and driver">
       <created>1674909059724</created>
@@ -136,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675369785381</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Initial commit with agent car and driver">
+      <created>1675615571119</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675615571120</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
